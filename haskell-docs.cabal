@@ -29,7 +29,7 @@ description:         Given a module name and a name, or just a name, it will fin
                      .
                      /USING WITH GHCI/
                      .
-                     > > :def doc \input -> return (":!haskell-docs " ++ input)
+                     > > :def doc \input -> Prelude.return (":!haskell-docs '" Prelude.++ input Prelude.++ "'")
                      > > :doc getContents
                      > The getContents operation returns all user input as a single string,
                      >  which is read lazily as it is needed
