@@ -39,7 +39,7 @@ If you are using haddock==2.12 somehow, please open an issue about it.
 ## Using with GHCi
 
 ``` haskell
- > :def doc \input -> return (":!haskell-docs " ++ input)
+ > :def doc \input -> Prelude.return (":!haskell-docs '" Prelude.++ input Prelude.++ "'")
  > :doc System.IO getContents base
 ```
 
